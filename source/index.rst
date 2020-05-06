@@ -8,7 +8,6 @@ Welcome to VanLuo Docs's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
 
 
