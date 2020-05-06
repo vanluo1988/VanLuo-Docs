@@ -13,7 +13,7 @@
 import sphinx_rtd_theme
 import recommonmark
 # from recommonmark.transform import AutoStructify
-# from recommonmark.parser import CommonMarkParser
+from recommonmark.parser import CommonMarkParser
 
 
 
@@ -64,7 +64,7 @@ source_suffix = {
 }
 
 source_parsers = {
-	'.md': 'recommonmark.parser.CommonMarkParser'
+	'.md': 'CommonMarkParser'
 }
 
 # master_doc = 'index'
