@@ -83,9 +83,35 @@ source_parsers = {
 source_suffix = ['.rst', '.md']
 ```
 
+## 写Sphinx文档
 
+### 写目录
+
+`toctree`可以把多个文档合并为一个，`maxdepth`是设置目录层级的参数，包含内容中间间隔一行，用/来区分文件夹，toctree的参数可以查看[链接](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#toctree-directive)。
+
+```reStructuredText
+.. toctree::
+   :maxdepth: 2
+
+   usage/installation
+   usage/quickstart
+```
+
+* 如果不想使用自带的文档标题，可以使用如下的语法：
+
+```reStructuredText
+All about strings <strings>
+```
+
+* 参数：
+  
+  * :numbered: 添加节号
+  * :titlesonly: 只显示文档标题
+  * :includehidden: 只显示顶级toctree
 
 ## 参考文档
 
 * [Google 开源项目风格指南 (中文版)](https://github.com/zh-google-styleguide/zh-google-styleguide)：作为编写文档格式的参考
+* https://www.xncoding.com/2017/01/22/fullstack/readthedoc.html
+* [Spinx官方中文文档](https://www.sphinx.org.cn/index.html)
 

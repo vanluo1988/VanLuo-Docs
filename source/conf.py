@@ -59,12 +59,11 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 source_suffix = {
     '.rst': 'restructuredtext',
-    '.txt': 'restructuredtext',
     '.md': 'markdown',
 }
 
 source_parsers = {
-	'.md': 'CommonMarkParser'
+	'.md': 'recommonmark.parser.CommonMarkParser'
 }
 
 # master_doc = 'index'
