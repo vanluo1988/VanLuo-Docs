@@ -42,7 +42,7 @@ sphinx-quickstart
 
 #### 配置主题
 
-默认的主题非常丑，先登陆https://sphinx-themes.org/，选择一个你喜欢的主题，在这里我以`sphinx_rtd_theme`为例。
+默认的主题非常丑，先登陆[https://sphinx-themes.org/](https://sphinx-themes.org/)，选择一个你喜欢的主题，在这里我以`sphinx_rtd_theme`为例。
 
 * 使用pip安装主题
 
@@ -65,7 +65,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 
 #### 配置MarkDown语法
 
-学习MarkDown已经很费劲了，更不要说再学习Sphinx的reStructuredText 语法了，使用如下的方法可以读取md文件，但是我还没有找到生成目录的好方法，目录继续使用.rst文件。
+学习MarkDown已经很费劲了，更不要说再学习Sphinx的reStructuredText 语法了，使用如下的方法可以读取md文件，但是我还没有找到生成目录的好方法，目录继续使用.rst文件，配置的[参考文档](https://www.sphinx.org.cn/usage/markdown.html)。
 
 * 使用pip安装转换器
 
@@ -82,6 +82,8 @@ source_parsers = {
 }
 source_suffix = ['.rst', '.md']
 ```
+
+* 千万不要配置`extensions = ['recommonmark']`，不然会引起报错
 
 ## 写Sphinx文档
 
@@ -109,9 +111,22 @@ All about strings <strings>
   * :titlesonly: 只显示文档标题
   * :includehidden: 只显示顶级toctree
 
+### 上传编写的文档
+
+* 使用git上传你编写好的文档。
+
+## 使用readthedocs构建页面
+
+* 打开[readthedocs网址](https://readthedocs.org/)，注册账号，并且import Git的项目
+
+<img src="../_static/使用Sphinx+Git+ReadtheDocs搭建个人博客.assets/image-20200507142956507.png" alt="image-20200507142956507" style="zoom:50%;" />
+
+* 进入项目进行设置，切换语言为简体中文。
+* 至此，每次的git提交都会触发页面的构建工作。
+
 ## 参考文档
 
 * [Google 开源项目风格指南 (中文版)](https://github.com/zh-google-styleguide/zh-google-styleguide)：作为编写文档格式的参考
-* https://www.xncoding.com/2017/01/22/fullstack/readthedoc.html
+* [搭建教程](https://www.xncoding.com/2017/01/22/fullstack/readthedoc.html)
 * [Spinx官方中文文档](https://www.sphinx.org.cn/index.html)
 

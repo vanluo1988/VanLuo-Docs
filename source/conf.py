@@ -29,7 +29,12 @@ author = 'VanLuo'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+import os
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if not on_rtd:
+	extensions = ['recommonmark']
+else:
+	extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -56,6 +61,8 @@ exclude_patterns = []
 # on_rtd is whether we are on readthedocs.org
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# on_rtd is whether we are on readthedocs.org
+
 
 source_suffix = {
     '.rst': 'restructuredtext',
