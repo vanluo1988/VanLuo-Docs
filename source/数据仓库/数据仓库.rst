@@ -1,7 +1,6 @@
 数据仓库
 ================================
 .. toctree::
-   :maxdepth: 1
    :glob:
    :titlesonly:
 
